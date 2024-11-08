@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        // Crear instancias de los botones
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             boton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // Comprobar si la pantalla está vacía
                     if (pantalla.getText().toString().equals("0")) {
                         msgError.show();
                     } else {
@@ -95,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        // Lógica para el botón de coma decimal
         botonComa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Lógica para el botón de resultado
         botonResultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -120,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Lógica para el botón de borrar el último carácter
         botonBorrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Lógica para el botón de reset
         botonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Función para evaluar la operación matemática
     public double eval(final String str) {
         return new Object() {
             int pos = -1, ch;
